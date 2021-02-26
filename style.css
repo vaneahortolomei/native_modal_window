@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+}
+.content-inset {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.button-box {
+    margin-top: 50px;
+    padding: 20px;
+    background: lightsteelblue;
+    border-radius: 50px;
+}
+.button-box__button {
+    border-radius: 20px;
+    border: none;
+    background: coral;
+    color: #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: box-shadow 300ms ease, transform 300ms ease;
+}
+.button-box__button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 18px 0 rgb(0 0 0 / 10%)
+}
+.modal-overlay {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 600ms, visibility 600ms;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    overflow: auto;
+    background-color: #faf9fe;
+}
+
+.modal-window {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modal-window__content {
+    background-color: #faf9fe;
+    text-align: center;
+    padding: 50px 25px;
+    color: #fff;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.modal-window__close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    box-shadow: 0 12px 18px 0 rgb(0 0 0 / 10%);
+    cursor: pointer;
+    transition: transform 600ms, opacity 600ms;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal-window__close-btn.active {
+    transform: translate(75px);
+    opacity: 1;
+}
+
+.modal-window__img {
+    padding: 0;
+    width: 350px;
+
+}
+.modal-window__link {
+    display: block;
+}
+.modal-window__title,
+.modal-window__subtitle {
+    color: #000;
+}
+
+@media(min-width: 575px){
+    .modal-window__img {
+        padding: 0 40px;
+    }
+}
+@media(min-width: 768px) {
+    .modal-dialog {
+        background: none;
+    }
+    .modal-window {
+        max-width: 500px;
+        margin: 1.75rem auto;
+        min-height: calc(100% - 3.5rem);
+    }
+    .modal-window__content {
+        border-radius: 10px;
+    }
+}
