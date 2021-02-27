@@ -7,6 +7,7 @@ img {
 .content-inset {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .button-box {
     margin-top: 50px;
@@ -83,13 +84,11 @@ img {
     border-radius: 50%;
     box-shadow: 0 12px 18px 0 rgb(0 0 0 / 10%);
     cursor: pointer;
-    transition: transform 600ms, opacity 600ms;
-    z-index: -1;
+    transition: transform 300ms, opacity 300ms;
     opacity: 0;
 }
 
 .modal-window__close-btn.active {
-    transform: translate(75px);
     opacity: 1;
 }
 
@@ -122,5 +121,12 @@ img {
     }
     .modal-window__content {
         border-radius: 10px;
+    }
+    .modal-window__close-btn {
+        z-index: -1;
+    }
+    .modal-window__close-btn.active {
+        transform: translate(75px);
+        opacity: 1;
     }
 }
