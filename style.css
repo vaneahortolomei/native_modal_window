@@ -24,10 +24,7 @@ img {
     cursor: pointer;
     transition: box-shadow 300ms ease, transform 300ms ease;
 }
-.button-box__button:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 18px 0 rgb(0 0 0 / 10%)
-}
+
 .modal-overlay {
     opacity: 0;
     visibility: hidden;
@@ -84,7 +81,6 @@ img {
     border-radius: 50%;
     box-shadow: 0 12px 18px 0 rgb(0 0 0 / 10%);
     cursor: pointer;
-    transition: transform 300ms, opacity 300ms;
     opacity: 0;
 }
 
@@ -124,9 +120,14 @@ img {
     }
     .modal-window__close-btn {
         z-index: -1;
+        transition: transform 300ms, opacity 300ms;
     }
     .modal-window__close-btn.active {
         transform: translate(75px);
         opacity: 1;
+    }
+    .button-box__button:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 18px 0 rgb(0 0 0 / 10%)
     }
 }
